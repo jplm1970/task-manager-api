@@ -22,8 +22,16 @@ RSpec.describe 'Users Api', type: :request do
       it "returns status code 200" do
         expect(response).to have_http_status(200)
       end
-
     end
+
+    context "when the user not exists" do
+      let(:user_id) { 10000 }
+
+      it "returns satatus code 404" do
+        expect(response).to have_http_status(404)
+      end
+    end
+
 
   end
 
