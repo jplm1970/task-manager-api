@@ -43,6 +43,7 @@ RSpec.configure do |config|
     end
   end
 
+# permite usar apenas buil ou outro sem factorygirl
   config.include FactoryGirl::Syntax::Methods
 
 
